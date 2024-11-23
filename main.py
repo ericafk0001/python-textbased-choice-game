@@ -69,6 +69,24 @@ if wants_to_play == "yes":
                             if ans == "yes":
                                 print("Old Man: Just go North East from here until you reach a giant mushroom. A wise kitten will guide you.")
                                 ans = input("Do you listen to the Old Man? (yes/no) ").lower()
+
+                                if ans == "yes":
+                                    ans = input("You start going North East just like the Old Man said.. you come across a village! Do you wish to go in the village or go around? (village/around) ").lower()
+
+                                    if ans == "village":
+                                        print("You explore the village..")
+                                        ans == input("You meet a Nun! She invites you for service. Accept? (yes/no) ").lower()
+                                        if ans == "yes":
+                                            ans == input("You and the Nun exchange information while walking to the church.. When you arrive, she opens the door to the basement. (continue) ").lower() 
+
+                                            if ans == "continue":
+                                                print("You follow the Nun down.. Out of nowhere, Multiple Nuns charge towards you and the door closes! What do you do? (fight/run/beg)")
+
+                                                if ans == "fight":
+                                                    print("You put your fists up.. The Nuns are too strong! They pin you down and use you as a sacrafice.")
+                                                    print("You Died! Game over.")
+                                                    break
+                                                                                       
                         else:
                             print("You pack up and get ready to leave.")
                     else:
