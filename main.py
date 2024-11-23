@@ -75,18 +75,30 @@ if wants_to_play == "yes":
 
                                     if ans == "village":
                                         print("You explore the village..")
-                                        ans == input("You meet a Nun! She invites you for service. Accept? (yes/no) ").lower()
+                                        ans = input("You meet a Nun! She invites you for service. Accept? (yes/no) ").lower()
                                         if ans == "yes":
-                                            ans == input("You and the Nun exchange information while walking to the church.. When you arrive, she opens the door to the basement. (continue) ").lower() 
+                                            ans = input("You and the Nun exchange information while walking to the church.. When you arrive, she opens the door to the basement. (continue) ").lower() 
 
                                             if ans == "continue":
-                                                print("You follow the Nun down.. Out of nowhere, Multiple Nuns charge towards you and the door closes! What do you do? (fight/run/beg)")
+                                                ans = input("You follow the Nun down.. Out of nowhere, Multiple Nuns charge towards you and the door closes! What do you do? (fight/run/beg) ").lower()
 
                                                 if ans == "fight":
                                                     print("You put your fists up.. The Nuns are too strong! They pin you down and use you as a sacrafice.")
+                                                    print("-100 HP")
                                                     print("You Died! Game over.")
                                                     break
-                                                                                       
+
+                                                elif ans == "run":
+                                                    print("You burst through the door behind you and you dash as far away as you can from the Church..")                                        
+                                                    print("You lose -5 HP for running so long")
+                                                    health -= 5
+                                                    print("You have", health, "HP")
+                                                    ans = input("You are now outside the village.. Do you want to continue going North East or go back to the village? (continue/back) ")
+
+                                                    if ans == "continue":
+                                                        print("After a few hours through the forest.. You reach an open plains!")
+                                                        print("You escaped the Forest! You win, Congratulations!")
+                                                        break                                        
                         else:
                             print("You pack up and get ready to leave.")
                     else:
