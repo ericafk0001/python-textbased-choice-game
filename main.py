@@ -1,3 +1,5 @@
+import random
+
 print("Welcome to 'The Forgotten Woods'!")
 print("You wake up in a dense forest with no memory of how you got there.")
 print("A tattered map beside you shows three key locations: The Old Cabin, The Hidden Glade, and The Ancient Tree.")
@@ -85,7 +87,7 @@ if wants_to_play == "yes":
                                                 if ans == "fight":
                                                     print("You put your fists up.. The Nuns are too strong! They pin you down and use you as a sacrafice.")
                                                     print("-100 HP")
-                                                    print("You Died! Game over.")
+                                                    print("You Died! Game Over.")
                                                     break
 
                                                 elif ans == "run":
@@ -96,9 +98,166 @@ if wants_to_play == "yes":
                                                     ans = input("You are now outside the village.. Do you want to continue going North East or go back to the village? (continue/back) ")
 
                                                     if ans == "continue":
-                                                        print("After a few hours through the forest.. You reach an open plains!")
-                                                        print("You escaped the Forest! You win, Congratulations!")
-                                                        break                                        
+                                                        print("After a few hours through the forest.. You see a giant mushroom!")
+                                                        print("You find the Cat resting on the Mushroom. You ask the Cat how to get out of the forest.")
+                                                        print("Wise Cat: To leave this forest, follow my words carefully:")
+                                                        print("Wise Cat: Head north until you reach a wide river. There’s no bridge, but look for the fallen tree—it’s sturdy enough to cross.")
+                                                        print("Wise Cat: Once across, beware the thorn bushes to the west. They may look harmless, but they’ll trap anyone who strays too close.")
+                                                        print("Wise Cat: Instead, keep going east until you find the old oak tree with twisted roots. Beneath it, you’ll find the path that leads you out.")   
+                                                        print("Wise Cat: Be swift, traveler. The forest doesn’t take kindly to those who linger.")
+                                                        ans = input("continue? (continue)")  
+                                                        if ans == "continue":
+                                                            print("You thank the wise cat and go North.. You reach the wide river the Cat mentioned and look for a fallen tree..")                                                
+                                                            ans = input("You see the fallen tree and walk towards it until you realized that you are very tired.. Do you want to take a nap or cross the river? (cross/nap) ").lower()                                                
+                                                            
+                                                            if ans == "nap":
+                                                                print("You decide to take a short nap before crossing the river.. Oh no! You got startled awake in the dark")
+                                                                ans = input("You hear leaves ruffling all around.. Out of nowhere, a wolf jumps on top of you! Quick! You need to do something. (punch/run) ").lower()
+                                                                
+                                                                if ans == "punch":
+                                                                    print("You channel all your energy into punching the wolf, but it is not affected at all.")
+                                                                    print("The wolf's huge mouth open wide displaying his canine teeth.. Your vision goes blank.")
+                                                                    print("You died by a wolf. Game Over.")
+                                                                    break
+
+                                                                else:
+                                                                    print("You try to push yourself off the ground to run away, but the wolf's shear weight pins you down..")
+                                                                    print("The wolf's huge mouth open wide displaying his canine teeth.. Your vision goes blank.")
+                                                                    print("You died by a wolf. Game Over.")
+                                                                    break
+                                                            
+                                                            else:
+                                                                print("You decide to cross the fallen tree because you do not know what will happen at night..")
+                                                                print("While crossing the tree, you almost slip.. You manage to stay balanced and cross to the other side!")
+                                                                print("The sun is starting to set down, so you can't see that well..")
+                                                                ans = input("On your west, you spot some bushes with something sharp that looks like berries. On your east, there are just trees. Do you go west or east? (west/east) ")
+                                                                
+                                                                if ans == "east":
+                                                                    print("You head eastbound and find an huge oak tree.. you see a path!")
+                                                                    print("You follow the path, and soon enough you come out the forest!")
+                                                                    print("You escaped the forest before nightfall! You win!")
+                                                                    break
+
+                                                                else:
+                                                                    print("You go west to the bushes.. You decide to pick some of the berries for later.")
+                                                                    print("You get poked by something sharp, and turns out the berries were actually thorns the cat was talking about!")
+                                                                    print("You start bleeding from your finger.. your vision gets blurry")
+                                                                    print("You died by poisonous bushes. Game Over.")
+                                                                    break
+                                                                    
+                                                    else:
+                                                        print("You decide to go back to the village.. While exploring the village you cross paths with the Nuns again!")
+                                                        print("You try to run again but having been exhausted before, you do not get far before the Nuns catch you!")
+                                                        print("A punch knocks you out. You do not wake up again.")
+                                                        print("You died from being sacrificed. Game Over.")     
+                                                        break 
+
+                                                else:
+                                                    print("You get on your knees and beg to not be sacrificed..")  
+                                                    print("The Nuns gather in a circle and start whispering to each other..")   
+                                                    if random.random() < 0.35:  # 35% chance
+                                                        print("The Nuns decide to spare you and let you off with a warning to not tell anyone.")
+                                                        print("You run as far as you can away out the village.. finally, you reach a huge oak tree!")
+                                                        ans = input("You see a path.. Do you follow the path or continue going North East? (follow/continue) ").lower()
+
+                                                        if ans == "follow":
+                                                            print("You follow the path, and soon enough you come out the forest!")
+                                                            print("You escaped the forest before nightfall! You win!")  
+                                                            break                                                         
+                                                        else:
+                                                            print("You continue going North East.. after hours you are still in the forest.")
+                                                            print("The sun is starting to set and it's getting dark. What do you want to do? (sleep/eat) ")
+
+                                                            if ans == "sleep":
+                                                                print("You decide to take a short nap before crossing the river.. Oh no! You got startled awake in the dark")
+                                                                ans = input("You hear leaves ruffling all around.. Out of nowhere, a wolf jumps on top of you! Quick! You need to do something. (punch/run) ").lower()
+                                                                
+                                                                if ans == "punch":
+                                                                    print("You channel all your energy into punching the wolf, but it is not affected at all.")
+                                                                    print("The wolf's huge mouth open wide displaying his canine teeth.. Your vision goes blank.")
+                                                                    print("You died by a wolf. Game Over.")
+                                                                    break
+
+                                                                else:
+                                                                    print("You try to push yourself off the ground to run away, but the wolf's shear weight pins you down..")
+                                                                    print("The wolf's huge mouth open wide displaying his canine teeth.. Your vision goes blank.")
+                                                                    print("You died by a wolf. Game Over.")
+                                                                    break
+                                                            else:
+                                                                remove_from_inventory("Sandwich")
+                                                                print("You eat 1 sandwich.")
+                                                                print("It's night and the sun has set..")
+                                                                print("You lost! You didn't escape the forest before nightfall.")
+                                                                break
+                                                    else:
+                                                        print("The Nuns decide that sparing you would anger their deity and proceed with the sacrifice!")     
+                                                        print("You died from being sacrificed. Game Over.")                                          
+                                                        break  
+
+                                        else:
+                                            print("You politely decline the Nun's offer. The Nun shoots a dirty glare at you and leaves.")
+                                            ans = input("You see a bar and a weaponsmith. Where do you want to go? (bar/weaponsmith) ").lower()
+
+                                            if ans == "bar":
+                                                print("You head to the bar.. as soon as you enter everyone stops talking and stares at you.")
+                                                ans = input("What do you want to say? (greet/stare)").lower()
+
+                                                if ans == "greet":
+                                                    print("You introduce yourself to the bar.. The people welcome you and everyone goes back to drinking")
+                                                    print("A woman walks up to you..")
+                                                    ans = input("Woman: Hey! What brings you to this small town of ours?").lower()
+                                                    print("You think about asking for a drink or asking how to get out of the forest.. (drink/ask) ")
+
+                                                    if ans == "drink":
+                                                        print("You tell the woman that you want to drink.. She buys you a pint on her.")
+                                                        print("Before long, you two test each other on who can drink the most..")
+                                                        print("You drink too much and pass out. It becomes night time.")
+                                                        print("You lose! You drank too much and couldn't escape the forest before nightfall.")
+                                                        break
+
+                                                    else:
+                                                        print("You ask about directions to leave the forest.")
+                                                        print("Woman: You just need to go east of here and you will get out of the forest! Did you not remember where you came from?")
+                                                        ans = input("You ignore her and thank her for the directions. (continue) ").lower()
+                                                        
+                                                        if ans == "continue":
+                                                            print("You go East like the woman said and eventually you see some open grass..")
+                                                            print("You come out of the forest!")
+                                                            print("You win! You escaped the forest before nightfall.")
+                                                            break  
+                                                
+                                                else: 
+                                                    print("People: Who do you think you are!")
+                                                    print("The people beat you up.")
+                                                    print("You died! Game Over.")
+                                                    break
+                                            
+                                            else: 
+                                                print("You go to the weaponsmith and get a free sword.")
+                                                add_to_inventory("Bronze Sword")
+                                                ans = input("You come out of the weaponsmith. The sun is setting now. Where do you want to go? (bar/northeast)").lower()
+                                                    
+                                                if ans == "northeast":
+                                                    print("You go northeast and through the thick forest you see an open plains!")
+                                                    print("Suddenly you see from your right eye, a orc charges at you!")
+                                                    ans = input("You dodge swiftly. Do you want to run to the grass or fight the orc? (fight/run) ").lower()
+                                                    if ans == "fight":
+                                                        print("You pull out the sword you got before.")
+                                                        print("The orc backs up slowly.. Then runs at you!!")
+                                                        ans = input("Step back or slash? (step_back/slash) ")
+
+                                                        if ans == "slash":
+                                                            print("You wait for the perfect timing . . .")
+                                                            print("You slash the orc in half!")
+                                                            print("You walk towards the grass you saw earlier.")
+                                                            print("You win! You escaped the forest before nightfall.")
+                                                        
+                                                        else:
+                                                            print("You step back.")
+                                                            print("The orc changes direction fast and lands a punch on you! (-50 HP)")
+                                                            health -= 50
+                                                            print("What do you do now? (attack/run) ")
+
                         else:
                             print("You pack up and get ready to leave.")
                     else:
