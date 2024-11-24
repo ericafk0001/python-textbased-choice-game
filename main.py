@@ -257,6 +257,28 @@ if wants_to_play == "yes":
                                                             print("The orc changes direction fast and lands a punch on you! (-50 HP)")
                                                             health -= 50
                                                             print("What do you do now? (attack/run) ")
+                                    else:
+                                        print("You decide to go around the village and come across a pack of goblins..")
+                                        ans = input("What do you do now? (run/fight) ").lower()
+
+                                        if ans == "run":
+                                            print("You tried to run away from the gang of goblins but they chase up to you!")
+                                            print("You died by a group of goblins. Game Over.")
+                                            break
+
+                                        else:
+                                            print("You stand your ground and fight the goblins.. A goblin bigger than the rest of the goblins charges towards you!")
+                                            ans = input("What do you want to do? (punch/throw_sandwich) ")
+                                            
+                                            if ans == "punch":
+                                                print("You throw a punch but it does nothing. . .")
+                                                print("You died by the leader goblin splitting you in half. Game Over.")
+                                                break
+
+                                            elif remove_from_inventory("Sandwich"):
+                                                print("You grab the sandwich you got from the old man and throw it at the goblin.")
+                                                print("All the other goblins run for it and they all start fighting each other for your sandwich..")
+                                                print("You sneak away while they are busy and continue heading northeast.")
 
                         else:
                             print("You pack up and get ready to leave.")
@@ -267,7 +289,7 @@ if wants_to_play == "yes":
                         continue
                 elif ans == "back":
                     print("You decide to step away from the cabin and look at your map again.")
-                    continue
+                    break
                 else:
                     print("Invalid choice. Please choose 'greet', 'punch', or 'run'.")
             
@@ -276,6 +298,7 @@ if wants_to_play == "yes":
                 continue
             else:
                 print("Invalid choice. Please choose 'knock' or 'back'.")
+                break
         
         elif choose_location == "hidden_glade":
             print("You venture into the Hidden Glade and discover a small beautiful clearing filled with flowers.")
