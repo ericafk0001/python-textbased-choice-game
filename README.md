@@ -31,4 +31,4 @@ _The Forgotten Woods_ combines exploration, strategy, and decision-making in a s
 
 ## Demo
 
-Insert gif or link to demo
+[youtube demo](https://youtu.be/8hRi7gEnDJs)
