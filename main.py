@@ -1,3 +1,10 @@
+import sys
+
+if sys.version_info < (3, 8):
+    print("This game requires Python 3.8 or higher. Please update your Python installation.")
+    exit(1)
+# test
+
 import random
 
 print("Welcome to 'The Forgotten Woods'!")
@@ -275,10 +282,17 @@ if wants_to_play == "yes":
                                                 print("You died by the leader goblin splitting you in half. Game Over.")
                                                 break
 
-                                            elif remove_from_inventory("Sandwich"):
-                                                print("You grab the sandwich you got from the old man and throw it at the goblin.")
-                                                print("All the other goblins run for it and they all start fighting each other for your sandwich..")
-                                                print("You sneak away while they are busy and continue heading northeast.")
+                                            elif ans == "throw_sandwich":
+                                                if "sandwich" in inventory and inventory["sandwich"] > 0:
+                                                    remove_from_inventory("sandwich")
+                                                    print("You grab the sandwich you got from the old man and throw it at the goblin.")
+                                                    print("All the other goblins run for it and they all start fighting each other for your sandwich.")
+                                                    print("You sneak away while they are busy and continue heading northeast.")
+                                                else:
+                                                    print("You don't have a sandwich! The goblins realize you're bluffing.")
+                                                    print("They get angry and eat you instead. Game over.")
+                                                    input("Press any key to exit the game.")  # exit
+                                                    break  # break
 
                         else:
                             print("You pack up and get ready to leave.")
