@@ -285,16 +285,24 @@ if wants_to_play == "yes":
                     else:
                         print("The old man's smile fades and he closes the door.")
                         print("You now walk back to the area you started from.")
-                        visited_locations.add(choose_location)
                         continue
-                elif ans == "back":
-                    print("You decide to step away from the cabin and look at your map again.")
+                elif ans == "punch":
+                    print("You punch the Old Man in the face . . .")
+                    print("He dodges it! He returns a punch that knocks you out... When you wake up you find yourself tied next to a lake.")
+                    print("Old Man: You won't see the sun again.")
+                    print(". . .")
+                    print("You died by drowning in a lake. Game Over.")
                     break
+
+                elif ans == "run":
+                    print("You decide to run away and trip over some vines.")
+                    print("You fall to your death into a ravine. Game Over.")
+
                 else:
                     print("Invalid choice. Please choose 'greet', 'punch', or 'run'.")
             
             elif ans == "back":
-                print("You decide to leave the cabin and look at your map again.")
+                print("You decide to step away from the cabin and look at your map again.")
                 continue
             else:
                 print("Invalid choice. Please choose 'knock' or 'back'.")
@@ -305,6 +313,8 @@ if wants_to_play == "yes":
             ans = input("You spot a beautiful woman sitting on a rock. Do you wish to approach her? (yes/no) ").lower()
             if ans == "yes":
                 print("The woman turns to you and whispers something strange...")
+                print("All of a sudden you stinging pain throughout your entire body")
+                print("You died by witch magic. Game Over.")
             else:
                 print("You decide not to disturb her and leave the glade.")
             visited_locations.add(choose_location)
