@@ -311,6 +311,7 @@ if wants_to_play == "yes":
                 elif ans == "run":
                     print("You decide to run away and trip over some vines.")
                     print("You fall to your death into a ravine. Game Over.")
+                    break
 
                 else:
                     print("Invalid choice. Please choose 'greet', 'punch', or 'run'.")
