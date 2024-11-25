@@ -315,6 +315,7 @@ if wants_to_play == "yes":
                 print("The woman turns to you and whispers something strange...")
                 print("All of a sudden you stinging pain throughout your entire body")
                 print("You died by witch magic. Game Over.")
+                break
             else:
                 print("You decide not to disturb her and leave the glade.")
             visited_locations.add(choose_location)
