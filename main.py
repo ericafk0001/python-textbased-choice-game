@@ -258,12 +258,19 @@ if wants_to_play == "yes":
                                                             print("You slash the orc in half!")
                                                             print("You walk towards the grass you saw earlier.")
                                                             print("You win! You escaped the forest before nightfall.")
+                                                            break
                                                         
                                                         else:
                                                             print("You step back.")
                                                             print("The orc changes direction fast and lands a punch on you! (-50 HP)")
                                                             health -= 50
-                                                            print("What do you do now? (attack/run) ")
+                                                            ans = input("What do you do now? (attack/run) ")
+                                                            if ans == "attack":
+                                                                print("You attack the orc and manage to kill it.")
+                                                                print("You walk towards the grass you saw earlier.")
+                                                                print("You win! You escaped the forest before nightfall.")
+                                                                break
+
                                     else:
                                         print("You decide to go around the village and come across a pack of goblins..")
                                         ans = input("What do you do now? (run/fight) ").lower()
