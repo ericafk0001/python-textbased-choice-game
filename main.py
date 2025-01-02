@@ -283,16 +283,19 @@ if wants_to_play == "yes":
                                                 break
 
                                             elif ans == "throw_sandwich":
-                                                if "sandwich" in inventory and inventory["sandwich"] > 0:
-                                                    remove_from_inventory("sandwich")
+                                                if "Sandwich" in inventory and inventory["Sandwich"] > 0:
+                                                    remove_from_inventory("Sandwich")
                                                     print("You grab the sandwich you got from the old man and throw it at the goblin.")
                                                     print("All the other goblins run for it and they all start fighting each other for your sandwich.")
                                                     print("You sneak away while they are busy and continue heading northeast.")
+                                                    print("You come across a clearing and see the sun setting, you quickly run into the clearing..")
+                                                    print("You win! You escaped the forest before nightfall.")
+                                                    break
                                                 else:
                                                     print("You don't have a sandwich! The goblins realize you're bluffing.")
                                                     print("They get angry and eat you instead. Game over.")
-                                                    input("Press any key to exit the game.")  # exit
-                                                    break  # break
+                                                    input("Press any key to exit the game.")
+                                                    break  
 
                         else:
                             print("You pack up and get ready to leave.")
